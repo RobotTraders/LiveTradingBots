@@ -26,7 +26,7 @@ params = {
 key_path = 'secret.json'
 key_name = 'envelope'
 
-tracker_file = f"strategies/envelope/tracker_{params['symbol'].replace('/', '-').replace(':', '-')}.json"
+tracker_file = f"code/strategies/envelope/tracker_{params['symbol'].replace('/', '-').replace(':', '-')}.json"
 
 trigger_price_delta = 0.005
 
