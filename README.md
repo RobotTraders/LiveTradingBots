@@ -1,6 +1,6 @@
 # LiveTradingBots
 
-_A homemade humble library to run python crypto trading bots_
+_A homemade humble library to run automated python crypto trading bots_
 
 
 \
