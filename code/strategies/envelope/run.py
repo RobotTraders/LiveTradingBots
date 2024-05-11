@@ -13,7 +13,7 @@ from utilities.bitget_futures import BitgetFutures
 params = {
     'symbol': '/USDT:USDT',
     'timeframe': '1h',
-    'margin_mode': 'isolated',
+    'margin_mode': 'isolated',  # 'cross'
     'balance_fraction': 1,
     'leverage': 1,
     'average_type': 'DCM',  # 'SMA', 'EMA', 'WMA', 'DCM' 
