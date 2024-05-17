@@ -23,10 +23,10 @@ params = {
 #    'price_jump_pct': 0.3,  # optional, remove if not wanted
 }
 
-key_path = 'secret.json'
+key_path = 'LiveTradingBots/secret.json'
 key_name = 'envelope'
 
-tracker_file = f"code/strategies/envelope/tracker_{params['symbol'].replace('/', '-').replace(':', '-')}.json"
+tracker_file = f"LiveTradingBots/code/strategies/envelope/tracker_{params['symbol'].replace('/', '-').replace(':', '-')}.json"
 
 trigger_price_delta = 0.005
 
