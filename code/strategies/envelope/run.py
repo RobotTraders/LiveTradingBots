@@ -20,7 +20,7 @@ params = {
     'average_period': 5,
     'envelopes': [0.07, 0.11, 0.14],
     'stop_loss_pct': 0.4,
-    'price_jump_pct': 0.3,  # optional, remove if not wanted
+#    'price_jump_pct': 0.3,  # optional, remove if not wanted
 }
 
 key_path = 'secret.json'
