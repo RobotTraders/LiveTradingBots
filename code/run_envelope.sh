@@ -1,3 +1,2 @@
-cd LiveTradingBots
-source .venv/bin/activate
-python3 code/strategies/envelope/run.py
+source LiveTradingBots/code/.venv/bin/activate
+python3 LiveTradingBots/code/strategies/envelope/run.py
