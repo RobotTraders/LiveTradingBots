@@ -13,7 +13,7 @@ _A homemade humble library to run automated python crypto trading bots_
 \
 ⭐ Bots and strategies
 -------------
-**Envelope** : for detailed information on functionality, installation, and access to all our resources, including codes and explanatory videos, please visit our [article](TBA).
+**Envelope** : for detailed information on functionality, installation, and access to all our resources, including codes and explanatory videos, please visit our [article](https://robottraders.io/blog/envelope-trading-bot).
 
 
 \
