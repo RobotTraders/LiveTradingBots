@@ -208,7 +208,7 @@ else:
 
 # --- FETCHING AND COMPUTING BALANCE ---
 balance = params['balance_fraction'] * params['leverage'] * bitget.fetch_balance()['USDT']['total']
-
+print(f"{datetime.now().strftime('%H:%M:%S')}: the trading balance is placed close {balance}")
 
 # --- PLACE ORDERS DEPENDING ON HOW MANY BANDS HAVE ALREADY BEEN HIT ---
 if open_position:
