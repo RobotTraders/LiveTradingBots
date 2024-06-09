@@ -2,9 +2,8 @@
 
 _A homemade humble library to run automated python crypto trading bots_
 
-
 \
-🛠️ Setup commands
+🛠️ Setup commands (virtual environement included)
 -------------
 > git clone https://github.com/RobotTraders/LiveTradingBots.git \
 > bash LiveTradingBots/install.sh
@@ -14,6 +13,12 @@ _A homemade humble library to run automated python crypto trading bots_
 ⭐ Bots and strategies
 -------------
 **Envelope** : for detailed information on functionality, installation, and access to all our resources, including codes and explanatory videos, please visit our [article](https://robottraders.io/blog/envelope-trading-bot).
+
+
+\
+✅ Requirements
+-------------
+Python >= 3.12 
 
 
 \
