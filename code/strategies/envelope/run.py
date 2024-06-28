@@ -29,7 +29,7 @@ key_name = 'envelope'
 tracker_file = f"LiveTradingBots/code/strategies/envelope/tracker_{params['symbol'].replace('/', '-').replace(':', '-')}.json"
 
 trigger_price_delta = 0.005  # what I use for a 1h timeframe
-# trigger_price_delta = 0.002  # what I use for a 15m timeframe
+# trigger_price_delta = 0.0015  # what I use for a 15m timeframe
 
 # --- AUTHENTICATION ---
 print(f"\n{datetime.now().strftime('%H:%M:%S')}: >>> starting execution for {params['symbol']}")
