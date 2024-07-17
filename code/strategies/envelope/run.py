@@ -20,7 +20,9 @@ params = {
     'average_period': 5,
     'envelopes': [0.07, 0.11, 0.14],
     'stop_loss_pct': 0.4,
-#    'price_jump_pct': 0.3,  # optional, remove if not wanted
+#    'price_jump_pct': 0.3,  # optional, uncomment to use
+    'use_longs': True,  # set to False if you want to use only shorts
+    'use_shorts': True,  # set to False if you want to use only longs
 }
 
 key_path = 'LiveTradingBots/secret.json'
@@ -221,6 +223,12 @@ else:
     short_ok = True
     range_longs = range(len(params['envelopes']))
     range_shorts = range(len(params['envelopes']))
+
+if not params['use_longs']:
+    long_ok = False
+
+if not params['use_shorts']:
+    short_ok = False
 
 if long_ok:
     for i in range_longs:
