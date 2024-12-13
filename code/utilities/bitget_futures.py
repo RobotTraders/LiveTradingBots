@@ -206,6 +206,7 @@ class BitgetFutures():
             params = {
                 'reduceOnly': reduce,
                 'triggerPrice': trigger_price,
+                'delegateType': 'price_fill',
             }
             return self.session.create_order(symbol, 'market', side, amount, params=params)
         except Exception as err:
@@ -223,6 +224,7 @@ class BitgetFutures():
             params = {
                 'reduceOnly': reduce,
                 'triggerPrice': trigger_price,
+                'delegateType': 'price_fill',
             }
             return self.session.create_order(symbol, 'limit', side, amount, price, params=params)
         except Exception as err:
