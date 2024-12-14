@@ -18,7 +18,7 @@ _A homemade humble library to run automated python crypto trading bots_
 \
 ✅ Requirements
 -------------
-Python = 3.12.x
+Python 3.12.x
 \
 See [requirements.txt](https://github.com/RobotTraders/LiveTradingBots/blob/main/requirements.txt) for the specific Python packages
 
