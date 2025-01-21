@@ -232,7 +232,9 @@ if not params['use_shorts']:
 
 if long_ok:
     for i in range_longs:
-        amount = balance / len(params['envelopes']) / data[f'band_low_{i + 1}'].iloc[-1]
+        entry_limit_price = data[f'band_low_{i + 1}'].iloc[-1]
+        entry_trigger_price = (1 + trigger_price_delta) * entry_limit_price
+        amount = balance / len(params['envelopes']) / entry_limit_price
         min_amount = bitget.fetch_min_amount_tradable(params['symbol'])
         if amount >= min_amount:
             # entry           
@@ -240,11 +242,11 @@ if long_ok:
                 symbol=params['symbol'],
                 side='buy',
                 amount=amount,
-                trigger_price= (1 + trigger_price_delta) * data[f'band_low_{i + 1}'].iloc[-1],
-                price=data[f'band_low_{i + 1}'].iloc[-1],
+                trigger_price=entry_trigger_price,
+                price=entry_limit_price,
                 print_error=True,
             )
-            print(f"{datetime.now().strftime('%H:%M:%S')}: placed open long trigger limit order of {amount}, trigger price {1.005 * data[f'band_low_{i + 1}'].iloc[-1]}, price {data[f'band_low_{i + 1}'].iloc[-1]}")
+            print(f"{datetime.now().strftime('%H:%M:%S')}: placed open long trigger limit order of {amount}, trigger price {entry_trigger_price}, price {entry_limit_price}")
             # exit
             bitget.place_trigger_market_order(
                 symbol=params['symbol'],
@@ -271,7 +273,9 @@ if long_ok:
 
 if short_ok:
     for i in range_shorts:
-        amount = balance / len(params['envelopes']) / data[f'band_high_{i + 1}'].iloc[-1]
+        entry_limit_price = data[f'band_high_{i + 1}'].iloc[-1]
+        entry_trigger_price = (1 - trigger_price_delta) * entry_limit_price
+        amount = balance / len(params['envelopes']) / entry_limit_price
         min_amount = bitget.fetch_min_amount_tradable(params['symbol'])
         if amount >= min_amount:
             # entry     
@@ -279,11 +283,11 @@ if short_ok:
                 symbol=params['symbol'],
                 side='sell',
                 amount=amount,
-                trigger_price= (1 - trigger_price_delta) * data[f'band_high_{i + 1}'].iloc[-1],
-                price=data[f'band_high_{i + 1}'].iloc[-1],
+                trigger_price= entry_trigger_price,
+                price=entry_limit_price,
                 print_error=True,
             )
-            print(f"{datetime.now().strftime('%H:%M:%S')}: placed open short trigger limit order of {amount}, trigger price {0.995 * data[f'band_high_{i + 1}'].iloc[-1]}, price {data[f'band_high_{i + 1}'].iloc[-1]}")
+            print(f"{datetime.now().strftime('%H:%M:%S')}: placed open short trigger limit order of {amount}, trigger price {entry_trigger_price}, price {entry_limit_price}")
             # exit
             bitget.place_trigger_market_order(
                 symbol=params['symbol'],
