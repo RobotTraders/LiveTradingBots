@@ -4,3 +4,5 @@ ta==0.11.0
 aiofiles==24.1.0
 seaborn==0.13.2
 pydantic==2.9.2
+requests==2.31.0
+numpy==1.26.2
